@@ -21,17 +21,17 @@
             </ul>
         </nav>
         <div class="header-actions">
-                <div class="lang-container">
-                    <i class="fas fa-globe"></i>
-                    <select id="lang-select" class="lang-picker">
-                        <option value="es">ES</option>
-                        <option value="en">EN</option>
-                        <option value="fr">FR</option>
-                    </select>
-                </div>
-                <button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button>
-                <button class="btn-login" data-key="contacto_btn" onclick="window.location.href='index.html'">Regresar</button>
+            <div class="lang-container">
+                <i class="fas fa-globe"></i>
+                <select id="lang-select" class="lang-picker">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
+            <button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button>
+            <button class="btn-login" data-key="contacto_btn" onclick="window.location.href='index.html'">Regresar</button>
+        </div>
     </header>
 
     <main class="container section">
@@ -50,15 +50,20 @@
         </nav>
 
         <div class="forms-grid">
-            
             <div id="ventas" class="card-form">
                 <div class="form-header">
                     <h3 data-key="sales_title">💼 Ventas</h3>
                     <p data-key="sales_desc">Cotiza tu proyecto con nosotros.</p>
                 </div>
-                <form>
-                    <input type="text" placeholder="Nombre de la empresa" required>
-                    <input type="email" placeholder="Correo corporativo" required>
+                <form onsubmit="event.preventDefault(); alert('Solicitud enviada');">
+                    <div class="input-container">
+                        <i class="fas fa-building"></i>
+                        <input type="text" placeholder="Nombre de la empresa" required>
+                    </div>
+                    <div class="input-container">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Correo corporativo" required>
+                    </div>
                     <button type="submit" class="btn-main" data-key="send_btn">Solicitar Cotización</button>
                 </form>
             </div>
@@ -68,8 +73,11 @@
                     <h3 data-key="support_title">🛠 Soporte Técnico</h3>
                     <p data-key="support_desc">¿Tienes problemas con tu servicio?</p>
                 </div>
-                <form>
-                    <input type="text" placeholder="ID de Cliente" required>
+                <form onsubmit="event.preventDefault(); alert('Ticket abierto correctamente');">
+                    <div class="input-container">
+                        <i class="fas fa-hashtag"></i>
+                        <input type="text" placeholder="ID de Cliente" required>
+                    </div>
                     <textarea placeholder="Falla técnica..." rows="4"></textarea>
                     <button type="submit" class="btn-main btn-alt" data-key="ticket_btn">Abrir Ticket</button>
                 </form>
@@ -78,16 +86,44 @@
             <div id="vacantes" class="card-form" style="display: none;">
                 <div class="form-header">
                     <h3 data-key="jobs_title">🚀 Únete al Equipo</h3>
-                    <p data-key="jobs_desc">Trabaja con nosotros en EL PROYECTO.</p>
+                    <p data-key="jobs_desc">Trabaja con nosotros.</p>
                 </div>
-                <form>
-                    <input type="text" placeholder="Nombre completo" required>
+                <form onsubmit="event.preventDefault(); alert('Postulación recibida');">
+                    <div class="input-container">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="input-container cv-input">
+                        <label for="cv-file"><i class="fas fa-file-pdf"></i> Adjuntar CV (PDF)</label>
+                        <input type="file" id="cv-file" accept=".pdf">
+                    </div>
                     <button type="submit" class="btn-main" data-key="apply_btn">Enviar Postulación</button>
                 </form>
             </div>
-
         </div>
     </main>
+
+    <div class="chatbot-container" id="chatbot">
+                    <div class="chatbot-header">
+                        <span>Asistente Virtual</span>
+                        <button onclick="toggleChat()">×</button>
+                    </div>
+                    <div class="chatbot-messages" id="chat-messages">
+                        <p class="bot-msg">¡Hola! Selecciona una opción o escribe tu duda:</p>
+                        <div class="quick-replies">
+                            <button onclick="quickReply('servicios')">Servicios</button>
+                            <button onclick="quickReply('contacto')">Contacto</button>
+                        </div>
+                    </div>
+                    <div class="chatbot-input">
+                        <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+                        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <button class="chat-toggle-btn" onclick="toggleChat()" id="chat-btn">
+                    <i class="fas fa-comment-dots"></i>
+                </button>
 
     <a href="https://wa.me/5218100000000" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
