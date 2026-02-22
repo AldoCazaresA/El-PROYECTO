@@ -48,8 +48,8 @@ body {
 }
 
 /* 4. Componentes y Tarjetas */
-.dark-mode .card, 
-.dark-mode .card-form, 
+.dark-mode .card,
+.dark-mode .card-form,
 .dark-mode .stat-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color) !important;
@@ -61,8 +61,8 @@ body {
 }
 
 /* 5. Inputs y Formularios */
-.dark-mode input, 
-.dark-mode select, 
+.dark-mode input,
+.dark-mode select,
 .dark-mode textarea {
     background-color: #252525;
     color: #fff;
@@ -167,7 +167,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    text-decoration: none; /* Por si se usa en etiquetas <a> */
+    text-decoration: none;
     display: inline-block;
 }
 
@@ -178,7 +178,7 @@ body {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espacio horizontal entre los elementos */
+    gap: 15px;
 }
 
 .lang-container {
@@ -205,7 +205,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     outline: none;
-    appearance: none; /* Quita la flecha del navegador */
+    appearance: none;
 }
 
 /* Evita que el botón de tema empuje a los demás */
@@ -226,7 +226,7 @@ body {
 
 .section {
     padding: 80px 0;
-    scroll-margin-top: 70px; 
+    scroll-margin-top: 70px;
 }
 
 .section-title {
@@ -246,7 +246,7 @@ body {
 
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
@@ -340,7 +340,9 @@ body {
    6. SERVICIOS (TARJETAS)
    ========================================= */
 
-.bg-light { background-color: #f4f7f6; }
+.bg-light {
+    background-color: #f4f7f6;
+}
 
 .services-grid {
     display: grid;
@@ -383,7 +385,7 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    background: var(--card-bg); /* Usa la variable que definimos antes */
+    background: var(--card-bg);
 }
 
 .project-card:hover {
@@ -407,25 +409,48 @@ body {
     color: var(--accent-color);
 }
 
-/* Ajuste Dark Mode para el texto descriptivo de la sección */
+/* Ajuste Dark Mode para texto descriptivo */
 .dark-mode .section-title p {
     color: #e0e0e0;
 }
 
-/* TESTIMONIOS */
-.testimonials-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-.testimonial-card { 
-    background: var(--card-bg); padding: 25px; border-radius: 15px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); max-width: 350px; text-align: center;
+/* =========================================
+   TESTIMONIOS
+   ========================================= */
+
+.testimonials-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    max-width: 350px;
+    text-align: center;
 }
 
 /* =========================================
-   ChatBot
+   CHATBOT
    ========================================= */
+
 .chat-toggle-btn {
-    position: fixed; bottom: 30px; left: 30px; /* Al lado opuesto de WhatsApp */
-    background: var(--accent-color); color: white; width: 60px; height: 60px;
-    border-radius: 50%; border: none; font-size: 25px; cursor: pointer; z-index: 2000;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: var(--accent-color);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 2000;
 }
 
 .chatbot-container {
@@ -436,8 +461,8 @@ body {
     background: var(--card-bg);
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-    display: none; /* Se mantiene oculto al inicio */
-    flex-direction: column; /* Esto permite que el header, mensajes e input se alineen bien */
+    display: none;
+    flex-direction: column;
     z-index: 2000;
     overflow: hidden;
     border: 1px solid var(--border-color);
@@ -494,16 +519,16 @@ body {
     max-width: 80%;
 }
 
-/* Scrollbar estética */
+/* Scrollbar */
 .chatbot-messages::-webkit-scrollbar {
     width: 5px;
 }
+
 .chatbot-messages::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 10px;
 }
 
-/* Botones de respuesta rápida dentro del chat */
 .quick-replies {
     display: flex;
     gap: 10px;
@@ -527,7 +552,6 @@ body {
     color: white;
 }
 
-/* Entrada de texto del Chatbot */
 .chatbot-input {
     display: flex;
     padding: 10px;
@@ -560,7 +584,7 @@ body {
 }
 
 /* =========================================
-   7. FOOTER (PIE DE PÁGINA)
+   7. FOOTER
    ========================================= */
 
 .main-footer {
@@ -585,7 +609,8 @@ body {
     min-width: 200px;
 }
 
-.footer-section h2, .footer-section h3 {
+.footer-section h2,
+.footer-section h3 {
     margin-bottom: 15px;
     color: #3498db;
 }
@@ -608,14 +633,14 @@ body {
     color: #ffffff;
 }
 
-/* Redes sociales ACTUALIZADAS */
+/* Redes sociales */
 .social-icons {
     display: flex;
     gap: 15px;
 }
 
 .icon {
-    display: flex;           /* Flex para centrar iconos de FontAwesome */
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -643,7 +668,7 @@ body {
 }
 
 /* =========================================
-   8. PÁGINA DE CONTACTO Y FORMULARIOS
+   8. CONTACTO Y FORMULARIOS
    ========================================= */
 
 .contacto-page {
@@ -651,13 +676,11 @@ body {
     min-height: 80vh;
 }
 
-/* Animación de entrada para los formularios */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Tabs / Menú de selección */
 .filter-nav {
     display: flex;
     justify-content: center;
@@ -683,18 +706,18 @@ body {
     transition: all 0.3s ease;
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
     background-color: #3498db;
     color: white;
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
-/* Cuadrícula y Tarjetas */
 .forms-grid {
     display: grid;
-    grid-template-columns: 1fr; 
-    max-width: 600px;           
-    margin: 0 auto;             
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
     gap: 30px;
 }
 
@@ -704,8 +727,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border: 1px solid #f0f0f0;
-    animation: fadeIn 0.5s ease forwards; /* Animación aplicada */
-    scroll-margin-top: 100px; 
+    animation: fadeIn 0.5s ease forwards;
+    scroll-margin-top: 100px;
 }
 
 .form-header {
@@ -721,9 +744,8 @@ body {
     margin-bottom: 5px;
 }
 
-/* Estilos de inputs, selects y textareas */
-.card-form input, 
-.card-form select, 
+.card-form input,
+.card-form select,
 .card-form textarea {
     width: 100%;
     padding: 14px;
@@ -735,7 +757,7 @@ body {
     transition: 0.3s;
 }
 
-.card-form input:focus, 
+.card-form input:focus,
 .card-form textarea:focus {
     border-color: #3498db;
     background-color: #f9fcff;
@@ -749,9 +771,8 @@ body {
     font-weight: 600;
 }
 
-/* Botones específicos de formularios */
 .btn-alt {
-    background-color: #e67e22; 
+    background-color: #e67e22;
 }
 
 .btn-alt:hover {
@@ -782,49 +803,48 @@ body {
 }
 
 /* =========================================
-   9. OPTIMIZACIÓN RESPONSIVA (MEDIA QUERIES)
+   9. RESPONSIVE
    ========================================= */
 
 @media (max-width: 768px) {
-    /* Ajustes del Header */
+
     .main-header {
-        flex-direction: column; /* Apila logo, menú y botones */
+        flex-direction: column;
         padding: 1rem;
         gap: 15px;
     }
 
     .nav-menu ul {
-        flex-wrap: wrap; /* Permite que el menú se rompa en varias líneas si es necesario */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
     }
 
     .header-actions {
         width: 100%;
-        justify-content: center; /* Centra el selector de idioma y botones en móvil */
+        justify-content: center;
     }
 
-    /* Ajustes del Hero */
     .hero-content h1 {
-        font-size: 2.2rem; /* Reduce el tamaño del título principal */
+        font-size: 2.2rem;
     }
 
-    /* Ajustes de Cuadrículas (Grids) */
-    .history-grid, .services-grid, .footer-container {
+    .history-grid,
+    .services-grid,
+    .footer-container {
         display: flex;
-        flex-direction: column; /* Cambia a una sola columna */
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     .history-stats {
-        grid-template-columns: 1fr; /* Una estadística por fila */
+        grid-template-columns: 1fr;
         width: 100%;
     }
 
-    /* Ajustes de Contacto */
     .filter-nav ul {
-        flex-direction: column; /* Apila los botones de Ventas/Soporte/Vacantes */
+        flex-direction: column;
         border-radius: 15px;
         width: 100%;
     }
@@ -839,14 +859,12 @@ body {
     }
 }
 
-/* Optimización para pantallas muy pequeñas (Celulares pequeños) */
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.8rem;
     }
-    
+
     .stat-number {
         font-size: 2rem;
     }
 }
-
