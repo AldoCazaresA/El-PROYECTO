@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
+        <title>EL PROYECTO</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="logo">
+                <h1>EL PROYECTO</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio" data-key="inicio">Inicio</a></li>
+                    <li><a href="#historia" data-key="historia">Historia</a></li>
+                    <li><a href="#servicios" data-key="servicios">Servicios</a></li>
+                    <li><a href="#proyectos" data-key="proyectos">Proyectos</a></li>
+                    <li><a href="#testimonios" data-key="testimonios">Testimonios</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-container">
+                    <i class="fas fa-globe"></i>
+                    <select id="lang-select" class="lang-picker">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                    </select>
+                </div>
+                <button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button>
+                <button class="btn-login" data-key="contacto_btn" onclick="window.location.href='contacto.html'">Contactanos</button>
+            </div>
+        </header>
+
+        <main>
+            <section id="inicio" class="hero">
+                <div class="hero-content">
+                    <h1 data-key="hero_title">Innovación Digital a tu Alcance</h1>
+                    <p data-key="hero_desc">Transformamos ideas complejas en realidades tecnológicas simples y elegantes.</p>
+                </div>
+            </section>
+
+            <section id="historia" class="container section">
+                <div class="section-title">
+                    <h2 data-key="historia">Nuestra Historia</h2>
+                    <hr>
+                </div>
+                <div class="history-grid">
+                    <div class="history-text">
+                        <p data-key="hist_text">Nacimos con la visión de cerrar la brecha entre la creatividad y el código...</p>
+                    </div>
+                    <div class="history-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">10+</span>
+                            <p class="stat-label" data-key="anos_experiencia">Años de Experiencia</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">50+</span>
+                            <p class="stat-label" data-key="proyectos_exitosos">Proyectos Exitosos</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100%</span>
+                            <p class="stat-label" data-key="clientes_satisfechos">Clientes Satisfechos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicios" class="bg-light section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 data-key="servicios">Servicios</h2>
+                        <hr>
+                    </div>
+                    <div class="services-grid">
+                        <div class="card">
+                            <div class="card-icon">💻</div>
+                            <h3>Web Design</h3>
+                            <p data-key="serv_web_desc">Sitios modernos, rápidos y totalmente responsivos.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">📱</div>
+                            <h3>Apps Móviles</h3>
+                            <p data-key="serv_app_desc">Desarrollo nativo para iOS y Android con la mejor UX.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">🚀</div>
+                            <h3>SEO & Marketing</h3>
+                            <p data-key="serv_seo_desc">Posicionamos tu marca en los primeros lugares de Google.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section id="proyectos" class="container section">
+                <div class="section-title">
+                    <h2 data-key="proyectos">Proyectos</h2>
+                    <hr>
+                    <p data-key="proyectos_desc">Una muestra de nuestros trabajos más recientes y destacados.</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="E-commerce">
+                        <div class="project-info">
+                            <h3>E-commerce Pro</h3>
+                            <p>Plataforma de ventas online.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="App Móvil">
+                        <div class="project-info">
+                            <h3>Fitness App</h3>
+                            <p>Monitoreo de salud en tiempo real.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://images.pexels.com/photos/5900222/pexels-photo-5900222.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Data Analytics">
+                        <div class="project-info">
+                            <h3>Data Analytics</h3>
+                            <p>Panel de control corporativo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonios" class="bg-light section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 data-key="test_title">Lo que dicen nuestros clientes</h2>
+                        <hr>
+                    </div>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p data-key="testimonial_1">"EL PROYECTO transformó nuestra idea en una app increíble. Muy profesionales."</p>
+                            <h4 data-key="testimonial_1_author">- Roberto Gómez</h4>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p data-key="testimonial_2">"El soporte técnico es de primer nivel. Siempre disponibles."</p>
+                            <h4>- Laura Martínez</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>EL PROYECTO</h2>
+                    <p data-key="footer_about">Creamos soluciones digitales innovadoras para proyectos modernos.</p>
+                </div>
+
+                <div class="footer-section links">
+                    <h3 data-key="proyectos">Enlaces</h3>
+                    <ul>
+                        <li><a href="#inicio" data-key="inicio">Inicio</a></li>
+                        <li><a href="#servicios" data-key="servicios">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <a href="https://wa.me/5218100000000" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+                <div class="chatbot-container" id="chatbot">
+                    <div class="chatbot-header">
+                        <span>Asistente Virtual</span>
+                        <button onclick="toggleChat()">×</button>
+                    </div>
+                    <div class="chatbot-messages" id="chat-messages">
+                        <p class="bot-msg">¡Hola! Selecciona una opción o escribe tu duda:</p>
+                        <div class="quick-replies">
+                            <button onclick="quickReply('servicios')">Servicios</button>
+                            <button onclick="quickReply('contacto')">Contacto</button>
+                        </div>
+                    </div>
+                    <div class="chatbot-input">
+                        <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+                        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <button class="chat-toggle-btn" onclick="toggleChat()" id="chat-btn">
+                    <i class="fas fa-comment-dots"></i>
+                </button>
+
+                <div class="footer-section social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 EL PROYECTO - Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Contacto - EL PROYECTO</title>
+</head>
+<body class="contacto">
+    <header class="main-header">
+        <div class="logo">
+            <h1>EL PROYECTO</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html#inicio" data-key="inicio">Inicio</a></li>
+                <li><a href="index.html#historia" data-key="historia">Historia</a></li>
+                <li><a href="index.html#servicios" data-key="servicios">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+                <div class="lang-container">
+                    <i class="fas fa-globe"></i>
+                    <select id="lang-select" class="lang-picker">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                    </select>
+                </div>
+                <button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button>
+                <button class="btn-login" data-key="contacto_btn" onclick="window.location.href='index.html'">Regresar</button>
+            </div>
+    </header>
+
+    <main class="container section">
+        <div class="section-title">
+            <h2 data-key="contact_title">Canales de Atención</h2>
+            <hr>
+            <p data-key="contact_subtitle">Selecciona el área con la que deseas comunicarte:</p>
+        </div>
+
+        <nav class="filter-nav">
+            <ul>
+                <li><a href="javascript:void(0)" class="filter-btn active" onclick="mostrarFormulario('ventas', this)" data-key="tab_sales">Ventas</a></li>
+                <li><a href="javascript:void(0)" class="filter-btn" onclick="mostrarFormulario('soporte', this)" data-key="tab_support">Soporte</a></li>
+                <li><a href="javascript:void(0)" class="filter-btn" onclick="mostrarFormulario('vacantes', this)" data-key="tab_jobs">Vacantes</a></li>
+            </ul>
+        </nav>
+
+        <div class="forms-grid">
+            
+            <div id="ventas" class="card-form">
+                <div class="form-header">
+                    <h3 data-key="sales_title">💼 Ventas</h3>
+                    <p data-key="sales_desc">Cotiza tu proyecto con nosotros.</p>
+                </div>
+                <form>
+                    <input type="text" placeholder="Nombre de la empresa" required>
+                    <input type="email" placeholder="Correo corporativo" required>
+                    <button type="submit" class="btn-main" data-key="send_btn">Solicitar Cotización</button>
+                </form>
+            </div>
+
+            <div id="soporte" class="card-form" style="display: none;">
+                <div class="form-header">
+                    <h3 data-key="support_title">🛠 Soporte Técnico</h3>
+                    <p data-key="support_desc">¿Tienes problemas con tu servicio?</p>
+                </div>
+                <form>
+                    <input type="text" placeholder="ID de Cliente" required>
+                    <textarea placeholder="Falla técnica..." rows="4"></textarea>
+                    <button type="submit" class="btn-main btn-alt" data-key="ticket_btn">Abrir Ticket</button>
+                </form>
+            </div>
+
+            <div id="vacantes" class="card-form" style="display: none;">
+                <div class="form-header">
+                    <h3 data-key="jobs_title">🚀 Únete al Equipo</h3>
+                    <p data-key="jobs_desc">Trabaja con nosotros en EL PROYECTO.</p>
+                </div>
+                <form>
+                    <input type="text" placeholder="Nombre completo" required>
+                    <button type="submit" class="btn-main" data-key="apply_btn">Enviar Postulación</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <a href="https://wa.me/5218100000000" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 EL PROYECTO - <span data-key="footer_rights">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+</body>
+</html>
