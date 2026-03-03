@@ -868,3 +868,26 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Esconde el botón gris feo que sale en tu imagen */
+input[type="file"].input-hidden {
+    display: none;
+}
+
+/* Mejora la caja de adjuntar para que sea el único botón visible */
+.cv-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px dashed #3498db;
+    border-radius: 12px;
+    background: rgba(52, 152, 219, 0.05);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px; /* Espacio para que no choque con el botón de abajo */
+}
+
+.cv-label:hover {
+    background: rgba(52, 152, 219, 0.1);
+}
