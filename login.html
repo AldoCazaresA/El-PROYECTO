@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Login - EL PROYECTO</title>
+</head>
+<body class="contacto"> <header class="main-header">
+        <div class="logo">
+            <h1 onclick="window.location.href='index.html'" style="cursor:pointer">EL PROYECTO</h1>
+        </div>
+        <button class="btn-login" onclick="window.location.href='index.html'">Regresar</button>
+    </header>
+
+    <main class="container section" style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+        <div class="card-form" style="max-width: 400px; width: 100%; display: block;">
+            <div class="form-header">
+                <h3><i class="fas fa-lock"></i> Acceso Administrativo</h3>
+                <p>Ingresa tus credenciales para ver los mensajes.</p>
+            </div>
+            
+            <form id="login-form">
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Usuario" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-key"></i>
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <p id="error-msg" style="color: #e74c3c; display: none; font-size: 0.9rem; margin-bottom: 10px;">Usuario o contraseña incorrectos.</p>
+                <button type="submit" class="btn-main">Entrar al Panel</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Lógica de acceso simple
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const error = document.getElementById('error-msg');
+
+            // Credenciales de prueba (Cámbialas a tu gusto)
+            if (user === 'admin' && pass === '1234') {
+                sessionStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'admin.html';
+            } else {
+                error.style.display = 'block';
+            }
+        });
+
+        // Mantener el tema oscuro si estaba activo
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    </script> </body>
+</html>

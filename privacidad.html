@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
+        <title>Privacidad - EL PROYECTO</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="logo">
+                <h1 onclick="window.location.href='index.html'" style="cursor:pointer">EL PROYECTO</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-key="inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios" data-key="servicios">Servicios</a></li>
+                    <li><a href="contacto.html" data-key="contacto_btn">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-container">
+                    <i class="fas fa-globe"></i>
+                    <select id="lang-select" class="lang-picker">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                    </select>
+                </div>
+                <button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button>
+            </div>
+            
+        </header>
+
+        <main>
+            <section class="hero" style="min-height: 30vh; display: flex; align-items: center; justify-content: center;">
+                <div class="hero-content">
+                    <h1 data-key="privacy_title">Política de Privacidad</h1>
+                    <p data-key="privacy_subtitle">Tu confianza y seguridad son nuestra prioridad.</p>
+                </div>
+            </section>
+
+            <section class="container section">
+                <div class="history-text">
+                    <h2 data-key="privacy_intro_h">Introducción</h2>
+                    <p data-key="privacy_intro_p">En <strong>EL PROYECTO</strong>, nos tomamos muy en serio la protección de sus datos personales. Esta política detalla cómo recopilamos, usamos y protegemos la información que nos proporciona a través de nuestro sitio web y servicios.</p>
+
+                    <br>
+
+                    <h2 data-key="privacy_data_h">Información que recopilamos</h2>
+                    <p data-key="privacy_data_p">Podemos recopilar información personal como su nombre, correo electrónico y número de teléfono cuando se pone en contacto con nosotros a través de nuestro formulario o el botón de WhatsApp.</p>
+
+                    <br>
+
+                    <h2 data-key="privacy_use_h">Uso de la información</h2>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li data-key="privacy_use_1">Para responder a sus consultas y proporcionar soporte técnico.</li>
+                        <li data-key="privacy_use_2">Para mejorar la experiencia de usuario en nuestra plataforma.</li>
+                        <li data-key="privacy_use_3">Para enviar actualizaciones relevantes sobre nuestros servicios (previa autorización).</li>
+                    </ul>
+
+                    <br>
+
+                    <h2 data-key="privacy_security_h">Seguridad</h2>
+                    <p data-key="privacy_security_p">Implementamos medidas de seguridad digitales para evitar el acceso no autorizado o la divulgación de sus datos. Sus conversaciones con nuestro chatbot y formularios están protegidos bajo protocolos estándar de la industria.</p>
+
+                    <br>
+
+                    <h2 data-key="privacy_cookies_h">Cookies</h2>
+                    <p data-key="privacy_cookies_p">Utilizamos cookies para analizar el tráfico del sitio y recordar sus preferencias de idioma y tema (claro/oscuro).</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+                <div class="footer-container">
+                    <div class="footer-section about">
+                        <h2>EL PROYECTO</h2>
+                        <p data-key="footer_about">Creamos soluciones digitales innovadoras para proyectos modernos.</p>
+                    </div>
+
+                    <div class="footer-section links">
+                    <h3 data-key="proyectos">Enlaces</h3>
+                    <ul>
+                        <li><a href="#inicio" data-key="inicio">Inicio</a></li>
+                        <li><a href="#servicios" data-key="servicios">Servicios</a></li>
+                        <li><a href="contacto.html" data-key="contacto_btn">Contacto</a></li>
+                        <li><a href="privacidad.html" data-key="privacidad">Privacidad</a></li>
+                        <li><a href="admin.html" data-key="admin">Admin</a></li>
+                    </ul>
+                </div>
+
+                    <a href="https://wa.me/5218100000000" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+                    <div class="chatbot-container" id="chatbot">
+                        <div class="chatbot-header">
+                            <span>Asistente Virtual</span>
+                            <button onclick="toggleChat()">×</button>
+                        </div>
+                        <div class="chatbot-messages" id="chat-messages">
+                            <p class="bot-msg">¡Hola! Selecciona una opción o escribe tu duda:</p>
+                            <div class="quick-replies">
+                                <button onclick="quickReply('servicios')">Servicios</button>
+                                <button onclick="quickReply('contacto')">Contacto</button>
+                            </div>
+                        </div>
+                        <div class="chatbot-input">
+                            <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+                            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+
+                    <button class="chat-toggle-btn" onclick="toggleChat()" id="chat-btn">
+                        <i class="fas fa-comment-dots"></i>
+                    </button>
+
+                    <div class="footer-section social">
+                        <h3 data-key="footer_social">Síguenos</h3>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/aldo_cazaresss/" class="icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="footer-bottom">
+                <p data-key="footer_rights">&copy; 2026 EL PROYECTO - Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>
