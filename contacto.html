@@ -44,7 +44,7 @@
         <nav class="filter-nav">
             <ul>
                 <li><a href="javascript:void(0)" class="filter-btn active" onclick="mostrarFormulario('ventas', this)" data-key="tab_sales">Ventas</a></li>
-                <li><a href="javascript:void(0)" class="filter-btn" onclick="mostrarFormulario('soporte', this)" data-key="tab_support">Soporte</a></li>
+                <li><a href="javascript:void(0)" class="filter-btn" onclick="mostrarFormulario('soporte', this)" data-key="tab_support">Soporte técnico</a></li>
                 <li><a href="javascript:void(0)" class="filter-btn" onclick="mostrarFormulario('vacantes', this)" data-key="tab_jobs">Vacantes</a></li>
             </ul>
         </nav>
@@ -55,14 +55,14 @@
                     <h3 data-key="sales_title">💼 Ventas</h3>
                     <p data-key="sales_desc">Cotiza tu proyecto con nosotros.</p>
                 </div>
-                <form onsubmit="event.preventDefault(); alert('Solicitud enviada');">
+                <form onsubmit="guardarMensaje(event, 'Ventas')">
                     <div class="input-container">
                         <i class="fas fa-building"></i>
-                        <input type="text" placeholder="Nombre de la empresa" required>
+                        <input type="text" id="venta-empresa" data-key="empresa_input" placeholder="Nombre de la empresa" required>
                     </div>
                     <div class="input-container">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Correo corporativo" required>
+                        <input type="email" id="venta-email" data-key="email_input" placeholder="Correo corporativo" required>
                     </div>
                     <button type="submit" class="btn-main" data-key="send_btn">Solicitar Cotización</button>
                 </form>
@@ -73,12 +73,12 @@
                     <h3 data-key="support_title">🛠 Soporte Técnico</h3>
                     <p data-key="support_desc">¿Tienes problemas con tu servicio?</p>
                 </div>
-                <form onsubmit="event.preventDefault(); alert('Ticket abierto correctamente');">
+                <form onsubmit="guardarMensaje(event, 'Soporte')">
                     <div class="input-container">
                         <i class="fas fa-hashtag"></i>
-                        <input type="text" placeholder="ID de Cliente" required>
+                        <input type="text" id="soporte-id" data-key="id_input" placeholder="ID de Cliente" required>
                     </div>
-                    <textarea placeholder="Falla técnica..." rows="4"></textarea>
+                    <textarea id="soporte-falla" data-key="falla_input" placeholder="Describe tu falla técnica..." rows="4"></textarea>
                     <button type="submit" class="btn-main btn-alt" data-key="ticket_btn">Abrir Ticket</button>
                 </form>
             </div>
@@ -88,14 +88,17 @@
                     <h3 data-key="jobs_title">🚀 Únete al Equipo</h3>
                     <p data-key="jobs_desc">Trabaja con nosotros.</p>
                 </div>
-                <form onsubmit="event.preventDefault(); alert('Postulación recibida');">
+                <form onsubmit="guardarMensaje(event, 'Vacantes')">
                     <div class="input-container">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="text" id="vacante-nombre" data-key="nombre_input" placeholder="Nombre completo" required>
                     </div>
                     <div class="input-container cv-input">
-                        <label for="cv-file"><i class="fas fa-file-pdf"></i> Adjuntar CV (PDF)</label>
-                        <input type="file" id="cv-file" accept=".pdf">
+                        <label for="cv-file">
+                            <i class="fas fa-file-pdf"></i> 
+                            <span data-key="cv_label">Adjuntar CV (PDF)</span>
+                        </label>
+                        <input type="file" id="cv-file" accept=".pdf" class="input-hidden" onchange="updateFileName(this)">
                     </div>
                     <button type="submit" class="btn-main" data-key="apply_btn">Enviar Postulación</button>
                 </form>
@@ -104,26 +107,26 @@
     </main>
 
     <div class="chatbot-container" id="chatbot">
-                    <div class="chatbot-header">
-                        <span>Asistente Virtual</span>
-                        <button onclick="toggleChat()">×</button>
-                    </div>
-                    <div class="chatbot-messages" id="chat-messages">
-                        <p class="bot-msg">¡Hola! Selecciona una opción o escribe tu duda:</p>
-                        <div class="quick-replies">
-                            <button onclick="quickReply('servicios')">Servicios</button>
-                            <button onclick="quickReply('contacto')">Contacto</button>
-                        </div>
-                    </div>
-                    <div class="chatbot-input">
-                        <input type="text" id="user-input" placeholder="Escribe un mensaje...">
-                        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
+        <div class="chatbot-header">
+            <span>Asistente Virtual</span>
+            <button onclick="toggleChat()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages">
+            <p class="bot-msg">¡Hola! Selecciona una opción o escribe tu duda:</p>
+            <div class="quick-replies">
+                <button onclick="quickReply('servicios')">Servicios</button>
+                <button onclick="quickReply('contacto')">Contacto</button>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
 
-                <button class="chat-toggle-btn" onclick="toggleChat()" id="chat-btn">
-                    <i class="fas fa-comment-dots"></i>
-                </button>
+    <button class="chat-toggle-btn" onclick="toggleChat()" id="chat-btn">
+        <i class="fas fa-comment-dots"></i>
+    </button>
 
     <a href="https://wa.me/5218100000000" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
